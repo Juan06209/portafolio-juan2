@@ -8,10 +8,14 @@
 </head>
 <body>
 
+    <!-- Contenedor de partículas -->
+    <div id="particles-js"></div>
+
     <!-- Barra de navegación -->
     <nav id="navbar">
         <ul>
             <li><a href="#welcome-section">Inicio</a></li>
+            <li><a href="#skills">Tecnologías</a></li>
             <li><a href="#projects">Proyectos</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
@@ -20,7 +24,34 @@
     <!-- Sección de bienvenida -->
     <section id="welcome-section">
         <h1>¡Hola, soy Juan Hernández!</h1>
-        <p>Desarrollador Web | Apasionado por la tecnología</p>
+        <p id="typed-text"></p> <!-- Efecto de máquina de escribir -->
+        <p class="description">
+            Apasionado por la tecnología y el desarrollo de software, me especializo en crear soluciones innovadoras, escalables y optimizadas para ofrecer experiencias digitales de alto impacto. Mi enfoque se centra en la eficiencia, la usabilidad y el rendimiento, garantizando productos bien estructurados y funcionales.
+            Con una mentalidad analítica y orientada a la resolución de problemas, disfruto enfrentar desafíos tecnológicos y colaborar con equipos para construir productos de calidad. Siempre estoy en constante aprendizaje, buscando mejorar mis habilidades y mantenerme al día con las últimas tendencias del sector. 
+        </p>
+    </section>
+
+    <!-- Sección de Tecnologías y Herramientas -->
+    <section id="skills">
+        <h2>Tecnologías y Herramientas</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://cdn.simpleicons.org/html5/f16529" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL">
+                <p>MySQL</p>
+            </div>
+        </div>
     </section>
 
     <!-- Sección de proyectos -->
@@ -34,8 +65,8 @@
             </div>
             <div class="project-tile">
                 <h3>Proyecto 2</h3>
-                <p>Aplicación de gestión de tareas.</p>
-                <a href="#" target="_blank">Ver Proyecto</a>
+                <p>Página de venta de audífonos</p>
+                <a href="https://juan06209.github.io/pagina-de-venta-de-audifonos/" target="_blank">Ver Proyecto</a>
             </div>
             <div class="project-tile">
                 <h3>Proyecto 3</h3>
@@ -50,11 +81,15 @@
         <h2>Contacto</h2>
         <p>Encuéntrame en mis redes sociales:</p>
         <div class="social-links">
-            <a id="profile-link" href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Twitter</a>
+            <a id="profile-link" href="https://github.com/Juan06209" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/juan-camilo-hernandez-gomez-0a584731b/" target="_blank">LinkedIn</a>
+            <a href="https://wa.me/3015061515" target="_blank">WhatsApp</a>
         </div>
     </section>
 
+    <!-- Scripts para efectos -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
 </body>
 </html>
