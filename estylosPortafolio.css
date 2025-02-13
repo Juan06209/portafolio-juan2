@@ -1,3 +1,23 @@
+/* Botón de menú hamburguesa */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #f0ad4e;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -35,16 +55,19 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(51, 51, 51, 0.95);
     padding: 15px 0;
     text-align: center;
     z-index: 1000;
+    transition: transform 0.3s ease-in-out;
 }
 
 #navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #navbar ul li {
@@ -56,10 +79,39 @@ body {
     color: #f0ad4e;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
 #navbar ul li a:hover {
     color: #ffffff;
+}
+
+/* Menú hamburguesa en móviles */
+@media (max-width: 768px) {
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.95);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #navbar.active {
+        transform: translateY(0);
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    #navbar ul li {
+        display: block;
+        margin: 15px 0;
+    }
 }
 
 /* Sección de bienvenida */
@@ -68,7 +120,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -105,8 +157,8 @@ body {
 }
 
 .skill img {
-    width: 60px;
-    height: 60px;
+    max-width: 100%;
+    height: auto;
 }
 
 .skill p {
@@ -145,6 +197,7 @@ body {
     margin: 10px;
     text-decoration: none;
     font-size: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
 .social-links a:hover {
@@ -153,9 +206,10 @@ body {
 
 a {
     color: #f0ad4e;
+    transition: color 0.3s ease-in-out;
 }
 
-a:hover{
+a:hover {
     color: #fad8ab;
 }
 

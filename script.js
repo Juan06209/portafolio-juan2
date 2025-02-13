@@ -27,3 +27,13 @@ const typed = new Typed("#typed-text", {
     backSpeed: 30,
     loop: true
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    menuToggle.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+
